@@ -10,7 +10,7 @@ from PIL import ImageTk, Image
 m=Tk(className='Dental')
 def f():
     X_train = []
-    path = "D:\\done"
+    path = "D:\Shairai Ali\Others\Programming\Python\Dataset\caries_orignal_data_set\done"
     for filename in os.listdir(path):
         img = cv2.imread(os.path.join(path, filename))
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -65,8 +65,6 @@ def f():
     l5.image=im1
     l5.pack()
     y_pred = kmeans.predict(X_test)
-    print(y_pred)
-    print(type(y_pred))
     if(y_pred[0]==1):
         l6=Label(m,text='Healthy')
         l6.place(x=360,y=260)
@@ -75,7 +73,6 @@ def f():
         l6.place(x=360,y=260)
     y_true = np.array([1])
     accuracy = metrics.accuracy_score(y_true, y_pred)
-    print(accuracy*100)
 l3=Label(m,text="Dental Caries Prediction System",font="Bold")
 l3.place(relx=0.5, rely=0.1, anchor=CENTER)
 l2=Label(m,text="Click here to upload : ")
