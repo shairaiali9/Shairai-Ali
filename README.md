@@ -1,3 +1,5 @@
+Dataset can be found - https://www.kaggle.com/datasets/salmansajid05/oral-diseases
+
 Here is Dental Caries Prediction System, which is based on unsupervised machine learning algorithm K-means Clustering. This algorithm mainly used for clustering data points into different clusters. 
 
 
